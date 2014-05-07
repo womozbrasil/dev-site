@@ -4,7 +4,7 @@ This quickstart is designed to allow you to push themes, plugins, and WordPress 
 #### Installation on your OpenShift gear  
 Use the following command to launch an instance of this quickstart on OpenShift
 
-	rhc app create wordpress php-5.4 mysql-5.5 --from-code=https://github.com/openshift-quickstarts/openshift-wordpress-developer-quickstart.git
+	rhc app create wordpress php-5.4 mysql-5.5 --from-code=https://github.com/openshift-quickstart/openshift-wordpress-developer-quickstart.git
 	
 Once your gear is finished being created, you will need to visit your app-domain.rhcloud.com address and finish setting up your WordPress site.  If you would prefer, you an also use php-5.3 and/or mysql-5.1 instead of what is listed in the above command.  
 
