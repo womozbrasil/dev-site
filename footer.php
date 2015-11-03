@@ -78,5 +78,8 @@ $zerif_socials_email = get_theme_mod('zerif_socials_email','#');
 		</div>
 	</footer>
 	<!-- //footer -->
+
+	<!-- JS -->
+	<?php wp_footer(); ?>
 </body>
 </html>
