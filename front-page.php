@@ -112,7 +112,7 @@ $zerif_bottomribbon_buttonlink = get_theme_mod('zerif_bottomribbon_buttonlink');
 							<p>O WoMoz existe desde 2009 e tem passado por reformulações de objetivos, a medida que ele cresce ao redor do mundo. No Brasil, o movimento foi iniciado em Outubro de 2014, por um grupo de voluntárias da comunidade brasileira. Desde o ínicio das atividades, nosso grupo participou e organizou inúmeras atividades de capacitação e inclusão, marcou presença em grandes fóruns de tecnologia, levando nossa proposta e missão de criar um ambiente melhor de convivência para todos, em especial, dando voz às mulheres e minorias. Todos podem participar do projeto, independentemente de sexo, idade, trabalho e etc, pois defendemos a premissa de que para incluir, não é necessário excluir! Basta você acreditar e defender a importância da liberdade e envolvimento de mulheres e minorias nas diversas áreas da tecnologia. A tecnologia pode e deve ser feita por todos, o futuro da web está em nossas mãos. Venha lutar com a gente! o/</p>
 						</div>
 						<div class="col-lg-4 col-md-4 column zerif-rtl-skills">
-							<h3>Nosso valores</h3>
+							<h3><i class="fa fa-heart fa-6"></i>Nosso valores</h3>
 						</div>
 <div class="col-lg-4 col-md-4 column zerif-rtl-skills">
 						<ul class="skills" data-scrollreveal="enter right after 0s over 1s">
@@ -219,7 +219,7 @@ $zerif_bottomribbon_buttonlink = get_theme_mod('zerif_bottomribbon_buttonlink');
 					<h3 class="container text" data-scrollreveal="enter left after 0s over 1s"><?php echo $zerif_bottomribbon_text; ?></h3>
 					<?php if( !empty($zerif_bottomribbon_buttonlabel) && !empty($zerif_bottomribbon_buttonlink) ):
 					echo '<div data-scrollreveal="enter right after 0s over 1s">';
-						echo '<a href="'.$zerif_bottomribbon_buttonlink.'" class="btn btn-primary custom-button green-btn">'.$zerif_bottomribbon_buttonlabel.'</a>';
+						echo '<a href="'.$zerif_bottomribbon_buttonlink.'" class="btn btn-primary custom-button red-btn">'.$zerif_bottomribbon_buttonlabel.'</a>';
 					echo '</div>';
 					endif;
 					?>

@@ -2199,7 +2199,7 @@ width: -webkit-calc(100% / 4);
     margin-bottom: 0;
     font-weight: 700;
     text-align: left;
-}
+}.about-us h3 .fa{    float: left;    font-size: 75px;    margin-right: 5px;}
 /*--SKILLS --*/
 .skills {
 	text-align: left;
