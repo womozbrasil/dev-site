@@ -1,0 +1,37 @@
+# editorconfig.org
+root = true
+
+# Pra todos os arquivos
+[*]
+indent_style = tab
+indent_size = 2
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Estilo de identação em arquivos HTML
+[*.html]
+indent_style = tab
+indent_size = 2
+
+# Estilo de identação em arquivos CSS
+[*.css]
+indent_style = tab
+indent_size = 2
+
+# Estilo de identação em arquivos JavaScript
+[*.js]
+indent_style = tab
+indent_size = 2
+spaces_around_brackets = inside
+
+# Estilo de identação em arquivos PHP
+[*.php]
+indent_style = tab
+indent_size = 2
+spaces_around_brackets = inside
+
+# Estilo de identação em arquivos Markdown
+[*.md]
+trim_trailing_whitespace = false
