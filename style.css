@@ -3256,8 +3256,9 @@ article .posted-on a:hover{
 	top: 0
 }
 .entry-content p {
-	text-align:justify;
-}
+	text-align:justify;	line-height: 25px;
+}
+
 .post-img-wrap-large a img{
 	max-width: 100%;
 	width: 100%;

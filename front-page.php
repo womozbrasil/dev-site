@@ -223,7 +223,7 @@ $zerif_bottomribbon_buttonlink = get_theme_mod('zerif_bottomribbon_buttonlink');
 							<p>O WoMoz existe desde 2009 e tem passado por reformulações de objetivos, a medida que ele cresce ao redor do mundo. No Brasil, o movimento foi iniciado em Outubro de 2014, por um grupo de voluntárias da comunidade brasileira. Desde o ínicio das atividades, nosso grupo participou e organizou inúmeras atividades de capacitação e inclusão, marcou presença em grandes fóruns de tecnologia, levando nossa proposta e missão de criar um ambiente melhor de convivência para todos, em especial, dando voz às mulheres e minorias. Todos podem participar do projeto, independentemente de sexo, idade, trabalho e etc, pois defendemos a premissa de que para incluir, não é necessário excluir! Basta você acreditar e defender a importância da liberdade e envolvimento de mulheres e minorias nas diversas áreas da tecnologia. A tecnologia pode e deve ser feita por todos, o futuro da web está em nossas mãos. Venha lutar com a gente! o/</p>
 
 						</div>
-
+						<div class="clear"></div>
 						<div class="col-lg-4 col-md-4 column zerif-rtl-skills">
 
 							<h3><i class="fa fa-heart fa-6"></i>Nosso valores</h3>
