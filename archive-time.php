@@ -24,13 +24,13 @@
 						<div class="team-member">
 							<figure class="profile-pic">
 								<?php if( has_post_thumbnail() ): ?>
-									<a href="<?php get_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('full'); ?></a>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('full'); ?></a>
 								<?php else: ?>
-									<a href="<?php get_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo get_template_directory_uri();  ?>/assets/images/blank-latestposts.png"></a>
+									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo get_template_directory_uri();  ?>/assets/images/blank-latestposts.png"></a>
 								<?php endif; ?>
 							</figure>
 							<div class="member-details">
-								<h5 class="dark-text red-border-bottom"><a href="<?php get_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h5>
+								<h5 class="dark-text red-border-bottom"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h5>
 								<div class="position"><?php the_excerpt(); ?></div>
 							</div>
 							<div class="social-icons">
