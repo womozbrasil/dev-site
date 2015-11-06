@@ -1773,9 +1773,12 @@ ul.nav > li.current_page_item.current > a:before {
 /*---------------------------------------
  **   Section: Our focus             -----
 -----------------------------------------*/
-.focus-box .service-icon .pixeden  {
-	border-radius: 50%;
-}
+.focus-box .service-icon .fa  {	border-radius: 50%;}
+.focus-box .service-icon .fa::before{
+	font-size: 80px;
+	margin: 25px;
+}
+
 .focus {
 	padding-bottom: 100px;
 	overflow: hidden;
