@@ -64,6 +64,9 @@ section {
 ol, ul {
 	list-style: none;
 }
+ol{
+	margin-left: 0;
+}
 table { /* tables still need 'cellspacing="0"' in the markup */
 	border-collapse: separate;
 	border-spacing: 0;
