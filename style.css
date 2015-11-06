@@ -641,7 +641,7 @@ textarea {
 	text-align: left;
 	text-transform: none;
 	padding: 9px;
-	min-height: 46px;
+	height: 46px;
 	padding-left: 15px !important;
 	display: inline-block;
 	border-radius: 4px;
@@ -5695,4 +5695,17 @@ body.custom-background {
 .zerif-copyright-box {
 	width: 100%;
     color: #666;
+}
+
+.content-left-wrap.col-md-9 input,
+.content-left-wrap.col-md-9 textarea{
+	border: 1px solid #e96656 !important;
+	width: 100% !important;
+}
+.content-left-wrap.col-md-9 input[type="submit"]{
+	clear: both;
+	display: table;
+	width: 122px;
+	height: 46px;
+	float: right;
 }
