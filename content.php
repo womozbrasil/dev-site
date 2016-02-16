@@ -20,7 +20,12 @@
 
 			<div class="list-post-top">
 				<header class="entry-header">
-					<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+					<h1 class="entry-title">
+						<a href="<?php the_permalink(); ?>" rel="bookmark">
+							<?=project_icon(get_the_ID()); ?>
+							<?php the_title(); ?>
+						</a>
+					</h1>
 
 					<?php if ( 'post' == get_post_type() ) : ?>
 

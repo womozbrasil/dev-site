@@ -155,3 +155,14 @@ function remove_class_function( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'remove_class_function' );
+
+// Retorna ícones setados no projeto
+// @parameter $id = get_the_ID()
+// @return html
+function project_icon($id) {
+	if (get_post_meta($id, 'icone', true)) {
+		$icon = get_post_meta($id, 'icone', true);
+		$icon = str_replace("fa-", "", $icon);
+		return "<i class='fa fa-$icon' style='margin-top: -.25rem;'></i>";
+	}
+}

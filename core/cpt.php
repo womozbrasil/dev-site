@@ -48,7 +48,7 @@ function womoz_projects_post_type() {
 		'label'               => __( 'projetos', 'womoz' ),
 		'description'         => __( 'Projetos do WoMoz', 'womoz' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', ),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments'),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -63,7 +63,6 @@ function womoz_projects_post_type() {
 		'publicly_queryable'  => true,
 		'capability_type'     => 'post',
 	);
-
 	register_post_type( 'projetos', $args );
 }
 add_action( 'init', 'womoz_projects_post_type', 0 );
@@ -91,7 +90,7 @@ function womoz_group_post_type() {
 		'label'               => __( 'integrantes', 'womoz' ),
 		'description'         => __( 'Time do WoMoz', 'womoz' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments', ),
+		'supports'            => array( 'title', 'editor', 'excerpt', 'thumbnail', 'comments'),
 		'hierarchical'        => false,
 		'public'              => true,
 		'show_ui'             => true,
@@ -110,3 +109,66 @@ function womoz_group_post_type() {
 	register_post_type( 'time', $args );
 }
 add_action( 'init', 'womoz_group_post_type', 0 );
+
+
+/*========================================
+=            Add project icon            =
+========================================*/
+function projeto_icone($object) {
+	wp_nonce_field(basename(__FILE__), "meta-box-nonce");
+	?>
+	<div>
+	<label for="icone"></label>
+	<select name="icone">
+			<?php
+			$icons = array(
+				"Nenhum" 		=> null,
+				"Educação"	=> "fa-heart",
+				"Dev"				=> "fa-github-alt",
+				"Eventos"		=> "fa-camera-retro"
+			);
+			foreach($icons as $name => $icon) {
+				if($icon == get_post_meta($object->ID, "icone", true)) {
+					echo "<option selected value='$icon'>$name</option>";
+				}else{
+					echo "<option value='$icon'>$name</option>";
+				}
+			}
+			?>
+		</select>
+	</div>
+	<?php
+}
+
+function save_custom_meta_box($post_id, $post, $update) {
+	if (!isset($_POST["meta-box-nonce"]) || !wp_verify_nonce($_POST["meta-box-nonce"], basename(__FILE__)))
+		return $post_id;
+
+	if(!current_user_can("edit_post", $post_id))
+		return $post_id;
+
+	if(defined("DOING_AUTOSAVE") && DOING_AUTOSAVE)
+		return $post_id;
+
+	$slug = "projetos";
+	if($slug != $post->post_type)
+		return $post_id;
+
+	$meta_box_dropdown_value = "";
+
+	if(isset($_POST["icone"])) {
+		$meta_box_dropdown_value = $_POST["icone"];
+	}
+
+	update_post_meta($post_id, "icone", $meta_box_dropdown_value);
+}
+
+add_action("save_post", "save_custom_meta_box", 10, 3);
+
+function add_custom_meta_box() {
+	add_meta_box("icone", "Ícone", "projeto_icone", "projetos", "side", "high", null);
+}
+
+add_action("add_meta_boxes", "add_custom_meta_box");
+
+/*=====  End of project icon  ======*/
